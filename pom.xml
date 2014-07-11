@@ -1,14 +1,18 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">    
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    
-    <parent>
-        <groupId>org.helgoboss</groupId>
-        <artifactId>my-scala-oss-parent</artifactId>
-        <version>1.0.0</version>
-        <relativePath />
-    </parent>
 
+    <distributionManagement>
+      <repository>
+        <uniqueVersion>false</uniqueVersion>
+        <id>janrain-snapshots</id>
+        <name>Janrain Artifactory</name>
+        <url>http://janrain.artifactoryonline.com/janrain/janrain-snapshots</url>
+        <layout>default</layout>
+      </repository>
+    </distributionManagement>
+
+    <groupId>org.helgoboss</groupId>
     <artifactId>domino</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <packaging>bundle</packaging>
@@ -105,7 +109,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Import-Package>scala*;version="[2.10,2.11)",*</Import-Package>
+                        <Import-Package>scala*;version="[2.11,2.12)",*</Import-Package>
                     </instructions>
                 </configuration>
             </plugin>
